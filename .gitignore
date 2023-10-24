@@ -1,0 +1,7 @@
+# ignore folder
+vids/
+dist/
+build/
+audio vids/
+# specific folder
+main.spec
