@@ -4,7 +4,7 @@ from functions import *
 print("Welcome to pmp3 | By XA72")
 
 while True:
-    user_i = input("| 1 | For Video only Audio | 2 | For Video: ")
+    user_i = input("| 1 | For Audio Only | 2 | For Video: ")
 
     if user_i == "1":
         while True:
@@ -14,8 +14,10 @@ while True:
             else:
                 print("Invalid Input")
         if "https://www.youtube.com/" in url:
-            youtube_video_audio = YouTube(url)
-            ytd(youtube_video_audio)
+            # Initialize a YouTube object with the provided URL
+            youtube_audio = YouTube(url)
+            # Call the download_audio function to download the audio
+            download_audio(youtube_audio)
         else:
             print("The input does not contain 'https://www.youtube.com/'.")
         break  # Exit the loop after successful input
@@ -27,8 +29,10 @@ while True:
             else:
                 print("Invalid Input")
         if "https://www.youtube.com/" in url:
-            youtube_audio = YouTube(url)
-            vid(youtube_audio)
+            # Initialize a YouTube object with the provided URL
+            youtube_video = YouTube(url)
+            # Call the download_video function to download the video
+            download_video(youtube_video)
         else:
             print("The input does not contain 'https://www.youtube.com/'.")
         break  # Exit the loop after successful input
