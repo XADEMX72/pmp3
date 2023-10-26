@@ -1,7 +1,8 @@
 # ignore folder
-vids/
+videos files/
 dist/
 build/
-audio vids/
+audio files/
+__pycache__
 # specific folder
 main.spec
